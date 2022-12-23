@@ -15,22 +15,22 @@
 \title{Your Dissertation Title}
 
 % Author name
-\author{Your M. Name}
+\author{Sidi Wang}
 
 % Department
-\department{Field of Degree (e.g. ``Psychology'')}
+\department{Biostatistics}
 
 % Year of completion
-\year=2020
+\year=2023
 
 % Author email
-\email{youremail@umich.edu}
+\email{sidiwang@umich.edu}
 
 % Author ORCID iD
-\orcid{0000-0000-0000-0000}
+\orcid{0000-0003-4838-0842}
 
 % Frontispiece
-\frontispiece{\includegraphics[width=4in]{front_materials/frontispiece.png}}
+%\frontispiece{\includegraphics[width=4in]{front_materials/frontispiece.png}}
 
 % Default style for front pages
 \frontpagestyle{7} % 7 is preferred by Rackham, but should be set individually for each front page
@@ -43,14 +43,14 @@
 \acknowledgments[7]{\input{front_materials/acknowledgments}}
 
 % Preface
-\preface[7]{\input{front_materials/preface}}
+%\preface[7]{\input{front_materials/preface}}
 
 % Committee
 \committee{ %
-Professor First Name, Chair \\
-Professor Second Name in Alphabetical Order \\
-Professor Third Name in Alphabetical Order \\
-Professor Fourth Name in Alphabetical Order
+Associate Professor Kelley M. Kidwell, Chair \\
+Professor Thomas M. Braun \\
+Assistant Professor Daniel L. Hertz\\
+Associate Professor Min Zhang
 }
 
 % Chair must be entered separately for formatting reasons.
@@ -68,8 +68,21 @@ Professor Fourth Name in Alphabetical Order
 % Definition of any acronyms used.
 % To add an acronym, add an \acro{}{} command on a new line within the \acronyms{} command. For \acro, field 1 is the acronym and field 2 is the corresponding expression. For example: \acro{TLA}{Three Letter Acronym}.
 \acronyms{
-    \acro{TLA}{Three Letter Acronym}
-    \acro{SOA}{Some Other Acronym}
+    \acro{6MWD}{6-minute walk distance}
+    \acro{ARAMIS}{A Randomized Multicenter Study for Isolated Skin Vasculitis}
+    \acro{BJSM}{Bayesian joint stage model}
+    \acro{CI}{credible interval}
+    \acro{CINRG}{Cooperative International Neuromuscular Research Group}
+    \acro{cTAP}{Collaborative Trajectory Analysis Project}
+    \acro{DMD}{Duchenne muscular dystrophy}
+    \acro{DNHS}{Duchenne Natural History Study}
+    \acro{FDA}{US Food and Drug Administration}
+    \acro{MAC}{Meta-Analytic Combined}
+    \acro{MMRM}{mixed-effects model of repeated measures}
+    \acro{NSAA}{North Star Ambulatory Assessment}
+    \acro{rMSE}{root mean squared error}
+    \acro{snSMART}{small sample, sequential, multiple assignment, randomized trial}
+    \acro{SMART}{sequential, multiple assignment, randomized trial}
 }
 
 % Some abstract text
@@ -83,6 +96,12 @@ Professor Fourth Name in Alphabetical Order
 
 \input{chapters/example_chapter_01}
 % Place your additional chapters here using the \input{} command
+\input{chapters/example_chapter_02}
+% Place your additional chapters here using the \input{} command
+\input{chapters/example_chapter_03}
+% Place your additional chapters here using the \input{} command
+\input{chapters/example_chapter_04}
+% Place your additional chapters here using the \input{} command
 \input{chapters/example_chapter_99}
 
 % Appendices
@@ -90,7 +109,7 @@ Professor Fourth Name in Alphabetical Order
 \input{appendices/example_appendix_01}
 \input{appendices/example_appendix_02}
 
-\bibliographystyle{plain}
+\bibliographystyle{agsm}
 
 % Give this command the relative path to the .bib file.
 \bibliography{references.bib}
