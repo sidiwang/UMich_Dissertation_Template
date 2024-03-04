@@ -1,8 +1,36 @@
-\chapter{Introduction}
+\chapter{Integrating External Control Data at the Patient Level into the Longitudinal Small Sample, Sequential, Multiple Assignment Randomized Trial (snSMART) Design}
 \label{chpt:chpt4}
 
-This is a dissertation template. Here is the introduction text. As with this chapter, add other chapters to the dissertation and cite them in the ``main.tex'' file.
+\section{Research Plan}
+In this project, we plan to present a study design that builds upon the trial design outlined in Chapter II by incorporating longitudinal data collected at each stage. Our goal is to estimate the stage 1 treatment effect more efficiently by utilizing longitudinal data from both stages of the trial and incorporating external data. This design will be particularly advantageous as it allows for the inclusion of a larger amount of data from natural history studies that are collected over time. To evaluate the treatment effect in our proposed study design, we plan to employ a Bayesian mixed model for repeated measures (MMRM) and account for confounding variables through inverse probability treatment weighting (IPTW). MMRM is a statistical model that facilitates the analysis of repeated measures data and takes into account the correlation between measurements taken on the same subject. IPTW is a technique that helps to balance the distribution of covariates between the treatment groups, thus reducing bias caused by confounding variables. Additionally, we will derive a robust Meta-Analytic Predictive (MAP) \citep{schmidli2014robust} prior for the model intercept of the Bayesian MMRM using the IPTW-adjusted pseudo population of external control data. The MAP approach allows for further down-weighting of external control data if there is a higher degree of variability between data sources. This approach allows us to consider various sources of heterogeneity and potential selection bias when combining external control data and data from different stages of the trial. To evaluate the performance of our proposed method, we will conduct simulation studies comparing it to traditional analytic methods. These simulations will provide insight into the strengths and limitations of our approach and help to identify the conditions under which it performs well.
 
+\section{Literature Review}
+The papers reviewed here focus on the use of statistical models in the analysis of disease progression in progressive rare diseases such as centronuclear myopathy, Duchenne muscular dystrophy (DMD), and GNE myopathy. These papers also discuss the use of Bayesian modeling in the analysis of clinical trial data and the incorporation of external data into the analysis.
 
+In the paper by \cite{raket2022progression}, a novel progression model called progression models for repeated measures (PMRMs) is introduced. The purpose of this model is to estimate non-traditional treatment effects, such as slowing or delaying the progression of a disease. PMRMs combines linear mixed effects models and penalized splines, providing better interpretability and clinically relevant insights through the analysis of time-based treatment effects.
 
-\blindtext[3]
+\cite{fouarge2021hierarchical} adopted a hierarchical Bayesian mixed-effects model to study the progression of centronuclear myopathy. By incorporating random effects for each patient, the model was able to capture the variations in the level and progression of the disease among individuals. This approach enabled the comparison of the outcomes of patients at a specific time post-treatment to simulated endpoint scores without treatment, providing valuable insights for rare disease trial analysis.
+
+\cite{lennie2020latent} propose a latent process model to investigate the progression of Duchenne Muscular Dystrophy (DMD) using the 6-minute walk test (6MWT) results. The model is a single continuous structural model with a single covariance matrix for random variability across all subjects. By using this model, the authors aim to estimate the rate of disease progression in patients with DMD and predict patients' 6MWT scores.
+
+\cite{quintana2019bayesian} used a Bayesian approach to analyze data collected longitudinally from GNE myopathy patients. The focus of the study was on the patients' muscle strength, which was used to develop a Bayesian Disease Progression Model (DPM). The DPM aligns subjects based on a latent disease age, and provides prediction of future long-term disease progression for each subject conditional upon the subject-level disease age and inherent muscle strength. 
+
+\cite{zhou2021incorporating} propose a method for incorporating external data into the analysis of clinical trials via Bayesian additive regression trees (BART), with a specific goal of estimating the conditional or population average treatment effect. BART adaptively pools information across data sources to improve the precision of treatment effect estimations. 
+
+\cite{kiran2021bayesian} propose a new method for creating synthetic control groups in clinical trials using a Bayesian nonparametric mixture model. This approach utilizes electronic health records (EHR) to identify similar population segments. The synthetic control group can then be used to make inferences about treatment effects using standard methods for randomized controlled trials (RCT).
+
+Overall, these papers highlight the use of statistical models and Bayesian modeling in the analysis of disease progression in progressive diseases and the incorporation of external data into the analysis of clinical trial data. 
+
+In addition, these papers demonstrate the importance of incorporating individual variation and external data into the analysis of disease progression. By accounting for individual variations, these models can provide a more accurate understanding of disease progression and inform personalized treatment options. Incorporating external data allows for the analysis of larger and more diverse datasets, which can improve the generalizability of the results. Our method is specific for the snSMART design and there differs from the papers discussed above. 
+
+Our proposed method for this research project, combining IPTW, Bayesian MMRM, and MAP, will provide a new way to consider both individual variations and external control data simultaneously. 
+
+\section{External Control Data}
+We have requested access to the below DMD datasets and will use them to conduct case studies in our Chapter IV project.
+\begin{itemize}
+    \item Duchenne Natural History Study (DNHS) - Cooperative International Neuromuscular Research Group (CINRG). \url{https://clinicaltrials.gov/ct2/show/NCT00468832}
+    \item A Prospective Natural History Study of Progression of Subjects With DMD - BioMarin Pharmaceutical \url{https://clinicaltrials.gov/ct2/show/NCT01753804}
+    \item A Study of Tadalafil for DMD - Eli Lilly and Company \url{https://clinicaltrials.gov/ct2/show/NCT01865084}
+    \item Natural history study by Cincinnati Children's Hospital Medical Center (CCHMC) (2004–2016)
+    \item Magnetic Resonance Imaging and Biomarkers for Muscular Dystrophy - University of Florida \url{https://clinicaltrials.gov/ct2/show/NCT01484678}
+\end{itemize}

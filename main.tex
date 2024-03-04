@@ -12,7 +12,7 @@
 \makeatother
 
 % Title of the thesis
-\title{Your Dissertation Title}
+\title{Bayesian Methods for snSMART Designs with External Controls and Predicting Overall Survival in Solid Tumor Oncology Studies}
 
 % Author name
 \author{Sidi Wang}
@@ -37,10 +37,10 @@
 
 % Dedication (the input [7] determines the style -- 7 is Rackham's preferred style)
 % \hidededication{%
-\dedication[7]{\input{front_materials/dedication}}
+%\dedication[7]{\input{front_materials/dedication}}
 
 % Acknowledgments (the input [7] determines the style -- 7 is Rackham's preferred style)
-\acknowledgments[7]{\input{front_materials/acknowledgments}}
+%\acknowledgments[7]{\input{front_materials/acknowledgments}}
 
 % Preface
 %\preface[7]{\input{front_materials/preface}}
@@ -54,14 +54,14 @@ Associate Professor Min Zhang
 }
 
 % Chair must be entered separately for formatting reasons.
-\chair{Professor First Name}
+\chair{Kelley}
 %\cochair{Co-chair One \& Co-chair Two}
 
 % Commands to hide or show lists of figures, tables, etc.
 % To hide a list, change the word "show" in the command to "hide".
 \showlistoftables
-\showlistofprograms
-\showlistofappendices
+\hidelistofprograms
+\hidelistofappendices
 \showlistofacronyms
 
 
@@ -69,10 +69,11 @@ Associate Professor Min Zhang
 % To add an acronym, add an \acro{}{} command on a new line within the \acronyms{} command. For \acro, field 1 is the acronym and field 2 is the corresponding expression. For example: \acro{TLA}{Three Letter Acronym}.
 \acronyms{
     \acro{6MWD}{6-minute walk distance}
-    \acro{ARAMIS}{A Randomized Multicenter Study for Isolated Skin Vasculitis}
     \acro{BJSM}{Bayesian joint stage model}
+    \acro{BMA}{Bayesian model averaging}
     \acro{CI}{credible interval}
     \acro{CINRG}{Cooperative International Neuromuscular Research Group}
+    \acro{CR}{coverage rate}
     \acro{cTAP}{Collaborative Trajectory Analysis Project}
     \acro{DMD}{Duchenne muscular dystrophy}
     \acro{DNHS}{Duchenne Natural History Study}
@@ -80,9 +81,14 @@ Associate Professor Min Zhang
     \acro{MAC}{Meta-Analytic Combined}
     \acro{MMRM}{mixed-effects model of repeated measures}
     \acro{NSAA}{North Star Ambulatory Assessment}
+    \acro{OS}{overall survival}
+    \acro{PD}{progressive disease}
+    \acro{PFS}{Progression-free survival}
+    \acro{RECIST}{Response Evaluation Criteria in Solid Tumors}
     \acro{rMSE}{root mean squared error}
     \acro{snSMART}{small sample, sequential, multiple assignment, randomized trial}
     \acro{SMART}{sequential, multiple assignment, randomized trial}
+
 }
 
 % Some abstract text
@@ -102,12 +108,12 @@ Associate Professor Min Zhang
 % Place your additional chapters here using the \input{} command
 \input{chapters/example_chapter_04}
 % Place your additional chapters here using the \input{} command
-\input{chapters/example_chapter_99}
+%\input{chapters/example_chapter_99}
 
 % Appendices
-\appendix
-\input{appendices/example_appendix_01}
-\input{appendices/example_appendix_02}
+%\appendix
+%\input{appendices/example_appendix_01}
+%\input{appendices/example_appendix_02}
 
 \bibliographystyle{agsm}
 
